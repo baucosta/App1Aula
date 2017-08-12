@@ -1,0 +1,61 @@
+#inputAcao:checked ~ #menuQuadrinhos,
+#inputQuadrinhos:checked ~ #menuAcao{
+    display:none;
+}
+input[type=radio]{
+    display:none;
+}
+.menu{
+    width:100%;
+}
+
+body{
+    background: #1E90FF;
+    font-family: sans-serif;
+    margin: 0;
+    text-align: center;
+}
+label{
+    background: center 0.5em no-repeat #E0FFFF;
+    color: #000;
+    display: block;
+    font-size: 75%;
+    padding: 4em 0 1em;
+    text-transform: uppercase;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+label[for=inputAcao]{
+    left: 0;
+    background-image: url(imagens/icone.png);
+}
+label[for=inputQuadrinhos]{
+    right: 0;
+    background-image: url(imagens/icone.png);
+}
+:checked + label {
+    background-color: #E4876D;
+}
+.menu {
+    margin-bottom: 100px;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.container-menus {
+    transform: translateX(0);
+    transition: transform 300ms ease;
+    width: 200%;
+}
+.container-menus .menu {
+    float: left;
+    width: 50%;
+}
+#inputAcao:checked ~ .container-menus {
+    transform: translateX(-50%);
+}
