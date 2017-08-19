@@ -18,5 +18,5 @@ version="1.0.0">
     <icon src="imagens/icon.jpg" />
 
     <!--SPLASH SCREEN-->
-    <gap:splash src="imagens/splash.jpg" />
+    <splash src="imagens/splash.jpg" />
 </widget>
