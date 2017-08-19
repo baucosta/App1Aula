@@ -18,5 +18,6 @@ version="1.0.0">
     <icon src="imagens/icon.jpg" />
 
     <!--SPLASH SCREEN-->
+    <plugin name="cordova-plugin-splashscreen" />
     <splash src="imagens/splash.jpg" />
 </widget>
