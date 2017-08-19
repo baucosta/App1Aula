@@ -13,4 +13,10 @@ version="1.0.0">
         email="qualquer@gmail.com">
         Amaury Gonçalves
     </author>
+    
+    <!--ÍCONE-->
+    <icon src="imagens/icon.jpg" />
+
+    <!--SPLASH SCREEN-->
+    <gap:splash src="imagens/splash.jpg" />
 </widget>
