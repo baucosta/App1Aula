@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+xmlns:gap="http://phonegap.com/ns/1.0"
+id="org.optativa.App1Optativa"
+version="1.0.0">
+    <name>
+        App1 Aula Optativa
+    </name>
+    <description>
+        Primeira aplicação da disciplina PPDM
+    </description>
+    <author href="http://www.doctum.edu.br"
+        email="qualquer@gmail.com">
+        Amaury Gonçalves
+    </author>
+
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
+    
+    <!--ÍCONE-->
+    <icon src="imagens/icon.jpg" />
+
+    <!--SPLASH SCREEN-->
+    <plugin name="cordova-plugin-splashscreen" />
+    <splash src="imagens/splash.jpg" />
+</widget>
