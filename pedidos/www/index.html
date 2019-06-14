@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">-->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <link rel="stylesheet" href="css/icons.css" />
+        <link rel="stylesheet" href="materialize/css/materialize.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="topo-fixo z-depth-1">
+            <div class="valign-wrapper yellow darken-4 white-text">
+                <h5 class="titulo">App Aula<h5>
+                <div>
+                    <a class='white-text dropdown-trigger' href='#' data-target='submenu'>
+                        <i class="material-icons waves-effect waves-light waves-circle">more_vert</i>
+                    </a>
+
+                    <ul id="submenu" class="dropdown-content">
+                        <li><a class="black-text acao-limpar">Limpar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="tabs yellow darken-4">
+                <li class="tab"><a class="waves-effect waves-light white-text" href="#padaria">Padaria</a></li>
+                <li class="tab"><a class="waves-effect waves-light white-text" href="#acougue">Açougue</a></li>
+            </ul>
+        </div>
+        <div id="padaria">
+            <div class="collection">
+                <a class="collection-item waves-effect waves-light">Pão de sal</a>
+                <a class="collection-item waves-effect waves-light">Pão de doce</a>
+                <a class="collection-item waves-effect waves-light">Pão de mel</a>
+                <a class="collection-item waves-effect waves-light">Pão de queijo</a>
+                <a class="collection-item waves-effect waves-light">Fofa</a>
+                <a class="collection-item waves-effect waves-light">Bolo</a>
+                
+            </div>
+        </div>
+
+        <div id="acougue">
+            <div class="collection">
+                <a class="collection-item waves-effect waves-light">Maçã de peito</a>
+                <a class="collection-item waves-effect waves-light">Fraudinha</a>
+                <a class="collection-item waves-effect waves-light">Patinho dianteiro</a>
+                <a class="collection-item waves-effect waves-light">Chã de dentro</a>
+                <a class="collection-item waves-effect waves-light">Picanha</a>
+                <a class="collection-item waves-effect waves-light">Bacon</a>
+            </div>
+        </div>
+
+        <!--botao flutuante-->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light brown modal-trigger"
+               href="#confirmacao" id="confirmar">
+                <i class="material-icons">done</i>
+            </a>
+        </div>
+        
+        <!--modal-->
+        <div id="confirmacao" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h5>Resumo do pedido</h5>
+                <blockquote id="resumo"></blockquote>
+            </div>
+            <div class="modal-footer">
+                <button class="btn deep-orange waves-effect waves-light modal-close" id="finalizar">
+                    Pedir
+                </button>
+                <button class="btn-flat waves-effect waves-red modal-close">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="materialize/js/materialize.min.js"></script>
+        <script src="js/app.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown();
+            });
+        </script>
+    </body>
+</html>
